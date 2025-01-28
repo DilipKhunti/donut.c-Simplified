@@ -2,9 +2,13 @@
 
 This repository contains a C implementation of a 3D spinning donut animation, along with a Python version and an optimized version of the same. The animation is rendered in the terminal using ASCII characters, creating a visually appealing spinning donut effect. The C program has been simplified to its core components to make it easier to understand and learn from.
 
-![](output.gif)
+<!-- ![](output.gif) -->
+<div align="center" >
+<img src="./output.gif"/>
+</div>
 
 ## Table of Contents
+
 1. [Overview](#overview)
 2. [How It Works](#how-it-works)
 3. [Simplified Explanation](#simplified-explanation)
@@ -30,26 +34,32 @@ This implementation is intentionally kept simple to focus on the core concepts, 
 ### Step-by-Step Explanation
 
 1. **Initialization**:
+
    - The program defines constants for the screen width (`WIDTH`), height (`HEIGHT`), and the spacing between angles (`THETA_SPACING`, `PHI_SPACING`).
    - The radii of the torus (`R1`, `R2`) and the perspective projection constants (`K1`, `K2`) are also defined.
 
 2. **Frame Rendering**:
+
    - The `render_frame` function is responsible for rendering each frame of the animation.
    - A frame buffer (`frame`) and a z-buffer (`z_buffer`) are initialized to store the ASCII characters and depth information, respectively.
 
 3. **3D Coordinates Calculation**:
+
    - The program loops through angles `theta` and `phi` to calculate the 3D coordinates of the torus.
    - The coordinates are rotated around the x and y axes using the rotation angles `A` and `B`.
 
 4. **Perspective Projection**:
+
    - The 3D coordinates are projected onto a 2D plane using perspective projection.
    - The projected coordinates are clamped to the screen bounds.
 
 5. **Brightness Calculation**:
+
    - The brightness of each point is calculated based on the surface normal and the light source.
    - The brightness index is used to select an appropriate ASCII character from the `LIGHT` gradient.
 
 6. **Frame Display**:
+
    - The frame buffer is printed to the terminal, creating the spinning donut animation.
 
 7. **Animation Loop**:
@@ -62,17 +72,21 @@ This implementation is intentionally kept simple to focus on the core concepts, 
 This program has been simplified to its most basic form to make it easier to understand. Here's how it achieves simplicity while maintaining functionality:
 
 1. **Minimal Code**:
+
    - The program avoids unnecessary complexity and focuses on the core logic of rendering the donut.
    - Only essential variables and calculations are included.
 
 2. **Straightforward Math**:
+
    - The 3D transformations and projections are implemented using basic trigonometry and linear algebra.
    - The math is kept as simple as possible, with clear variable names and comments.
 
 3. **No External Dependencies**:
+
    - The program uses only standard C libraries (`stdio.h`, `stdlib.h`, `math.h`, `string.h`), making it easy to compile and run on any system.
 
 4. **Readable Structure**:
+
    - The code is organized into logical sections, with comments explaining each step.
    - The `render_frame` function encapsulates the rendering logic, making it easy to follow.
 
@@ -88,7 +102,6 @@ This program has been simplified to its most basic form to make it easier to und
 - `optimized_donut.c`: An optimized version of the C implementation.
 - `original_donut.c`: An original legacy code of the notorious donut.c.
 - `README.md`: This file, containing detailed information about the project.
-
 
 ---
 
